@@ -57,3 +57,65 @@ En plus des ressources fournies dans le cadre du cours, j'ai utilisé les sites 
 ## Liberté prise
 - Quand l'on clique sur un artiste de la programmation.html , cela nous redirige sur sa page d'artiste.html (marche que pour Winnterzuko et Disiz)
 - Utilisation JS pour meilleur slide
+- Calcul du prix sur la billeterie
+
+----------------------------------------------------------------------
+# MinuitAvantLaNuit[EN]------------------------------------------------------------------------------------------
+
+## Introduction
+This project was carried out as part of a practical work on HTML and CSS within the framework of my training at [ESIR]. It is a simplistic clone of the website [MinuitAvantLaNuit.fr](https://minuitavantlanuit.fr/), with specific constraints for each page, following the instructions of the IHM - HTML and CSS TP/TD.
+
+## Summary of Required Pages
+
+### 1. Home Page (index.html)
+- Basic structure with header, navigation, page content, and footer.
+- Recap table of project progress.
+- Use of Bootstrap for visual aspect.
+
+![index.html](img/README/index.png)
+
+### 2. Festival Presentation (presentation.html)
+- Integration of header, navigation, and footer.
+- Festival description with a representative image.
+- Bootstrap carousel with artist images.
+
+![presentation.html](img/README/presentation.png)
+
+### 3. Festival Schedule (programmation.html)
+- Display of schedule by day.
+- Anchoring links to corresponding days.
+- Careful visual presentation.
+
+![programmation.html](img/README/programmation.png)
+
+### 4. Artist Page (artiste.html)
+- Presentation of a music group participating in the festival.
+- Group image, presentation text, video, and group members.
+- Possibility to reuse the same structure for other artists.
+
+![artiste.html](img/README/artiste.png)
+
+### 5. Ticketing (billetterie.html)
+- Ticket reservation form for the festival.
+- Collection of user information with server-side validation.
+- Options for reserved days, insurance, camping spot, and festival T-shirt.
+
+![billetterie.html](img/README/billetterie.png)
+
+### 6. Practical Information (info.html)
+- Practical information for festival participants.
+- Google Maps map to locate the event.
+- Links to transportation, local institutions, and accommodations.
+
+![info.html](img/README/info.png)
+
+## Additional Resources
+In addition to the resources provided in the course, I used the following sites:
+- HTML and CSS documentation from Mozilla Developer Network (MDN)
+- Documentation and guides from W3Schools
+- Bootstrap documentation
+  
+## Freedom Taken
+- When clicking on an artist from programmation.html, it redirects to their artist page (works only for Winnterzuko and Disiz).
+- Use of JS for better slideshow.
+- Ticket price calculation on the ticketing page.
