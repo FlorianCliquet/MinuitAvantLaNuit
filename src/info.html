@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Minuit avant la Nuit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 960px; 
+            margin: 0 auto;
+        }
+        .header--img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <img src="https://minuitavantlanuit.fr/assets/dist/front/images/MALN24_Header_MALN_mobile.png" alt="Minuit avant la nuit" class="header--img">
+</head>
+<body>
+    <nav class="sticky navbar">
+        <div class="brand  display__logo">
+            <a href="#top" class="nav__link"> <span class="logo">Minuit Avant La Nuit</span></a>
+        </div>
+    
+        <input type="checkbox" id="nav" class="hidden" />
+        <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
+        <div class="nav">
+            <ul class="nav__items">
+                <li class="nav__item"><a href="./../index.html" class="nav__link">Index</a></li>
+                <li class="nav__item"><a href="presentation.html" class="nav__link">Presentation</a></li>
+                <li class="nav__item"><a href="programmation.html" class="nav__link">Programmation</a></li>
+                <li class="nav__item"><a href="artistes.html" class="nav__link">Artistes</a></li>       
+                <li class="nav__item"><a href="billeteries.html" class="nav__link">Billeteries</a></li>   
+                <li class="nav__item"><a href="info.html" class="nav__link">Infos Pratiques</a></li>       
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 4, center: uluru});
+                var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        </script>
+
+        <h2>Comment venir sur le lieu du festival</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Moyen de transport</th>
+                    <th scope="col">Lien</th>
+                    <th scope="col">Informations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>En transport en commun :</td>
+                    <td><a href="https://www.ametis.fr">Informations sur les bus</a></td>
+                    <td>Profitez du réseau de bus Ametis de la ville (en plus, le samedi, les bus sont gratuits !), ou encore de leur service de location de vélo !
+                        Arrêt de bus à proximité immédiate de l'entrée du festival : Citadelle Montrescu, lignes désservies : N2, N3, 11 et L.</td>
+                </tr>
+                <tr>
+                    <td>En Train</td>
+                    <td><a href="https://example.com/train">Informations sur les trains</a></td>
+                    <td>La gare se trouve à 20 minutes à pied de l'entrée du festival !
+                        Avec son positionnement géographique central, Amiens se trouve à 40 minutes d'Arras, 1h05 de Paris, 1h20 de Lille, 1h25 de Rouen, 2h20 de Reims, ou encore à 3h de Bruxelles.</td>
+                </tr>
+                <tr>
+                    <td>En voiture :</td>
+                    <td><a href="https://www.mobicoop.fr/covoiturages-evenements/2644/MINUIT-AVANT-LA-NUIT">Informations sur le covoiturage</a></td>
+                    <td>Parkings : À Amiens, le stationnement est payant dans les rues du centre-ville de 9h à 12h30 et de 14h à 17h30 (gratuité du dimanche au lundi à 14h), et dans les zones résidentielles de 9h à 12h30 et de 14h à 19h (gratuité du dimanche au lundi à 14h). Toutefois, les places sont rares à proximité du festival. Pour mieux préparer votre venue, consultez la carte interactive du stationnement à Amiens.
+    
+                        Quitte à prendre la voiture, pensez à l'option covoiturage ! Proposez votre trajet ou cherchez-en un sur le site de notre partenaire Mobicoop.</td>
+                </tr>
+                <tr>
+                    <td>A vélo :</td>
+                    <td><a href="https://www.amiens.fr/Vivre-a-Amiens/Mobilite/Se-deplacer-a-velo/Itineraires-cyclables"> une belle balade autour du Patrimoine, des Hortillonnages ou de la nature environnante !</a></td>
+                    <td>Préférez la mobilité douce ! Il est si agréable de se déplacer à vélo à Amiens...
+                        Pendant la durée du festival, un parking à vélo gratuit et surveillé est installé à proximité immédiate de l'entrée du festival. Suivez les indications sur place !
+                        Vous n'avez pas de vélo ? Louez-en un avec le service Buscylette ou les Vélam en libre service.
+                        Enfin, profitez-en pour faire une belle balade autour du Patrimoine, des Hortillonnages ou de la nature environnante !</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Institutions</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Institution</th>
+                    <th scope="col">Lien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mairie</td>
+                    <td><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwii6NyohLGFAxWIVqQEHQfkC1AQFnoECA8QAQ&url=https%3A%2F%2Fwww.amiens.fr%2F&usg=AOvVaw32O4J3SQmV0-tyJ1T6kyVN&opi=89978449">Site de la mairie</a></td>
+                </tr>
+                <tr>
+                    <td>Police</td>
+                    <td><a href="https://www.masecurite.interieur.gouv.fr/fr">Site de la police</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Hébergements</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Type d'hébergement</th>
+                    <th scope="col">Lien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hôtel</td>
+                    <td><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi03uH5hLGFAxUOvGgJHQGCAx0YABACGgJ3Zg&ae=2&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xRFONimAcG2wtHnLJTSIrD81MCys-X7rWOeHzpWHAdjoVhUHFxpZroaApfKEALw_wcB&ohost=www.google.com&cid=CAESV-D2wfD-GLQtVCRx2MVQCNgbui-2ndx0L2Vzpu_kb6zMZFToyKpKGL63LcrteMP32aQnd6nzebiGnXM01ev1J5CEV7cAYrNWqkq3D_prdon5hbBeO3Vcuw&sig=AOD64_2xh52_rDBAsgSOkPLfYbga63MA9Q&q&adurl&ved=2ahUKEwiVgNv5hLGFAxXnTKQEHe3BCkIQ0Qx6BAgKEAM">Liste des hôtels</a></td>
+                </tr>
+                <tr>
+                    <td>Location d'appartement</td>
+                    <td><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwju1tWBhbGFAxWQTaQEHX8kDBAQFnoECBMQAQ&url=https%3A%2F%2Fwww.seloger.com%2Fimmobilier%2Flocations%2Fimmo-amiens-80%2Fbien-appartement%2F&usg=AOvVaw3qotkU4gANZp08lrXZrW4u&opi=89978449">Liste des locations</a></td>
+                </tr>
+                <tr>
+                    <td>Auberge de jeunesse</td>
+                    <td><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjuoKiIhbGFAxW5W0ECHUUOD1sYABAFGgJ3cw&ae=2&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQMoharOtp9Q_6gq_oz0T_cxborES-cNrEOPwdk43HaYvVOgZ--u2EaAjpfEALw_wcB&ohost=www.google.com&cid=CAESV-D2HIl12j6K0bZIup-o4J-ahn507TVrHW7K2s2cFT-RB_VLuObT4_yfbVcAj3Rm_X15ku4qAb6d8NXu3S8lcIBeadH1xpy4qgRjsUr6H8HC4LKBwrSw5w&sig=AOD64_1CQO4YHmVQ7Li2E_llyht83U9IgA&q&adurl&ved=2ahUKEwinsKKIhbGFAxWzVaQEHWbbCA8Q0Qx6BAgFEAM">Liste des auberges</a></td>
+                </tr>
+            </tbody>
+        </table>
+                <h2 id="Contacts">Contacts</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Département</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>COMMUNICATION & PRESSE</td>
+                    <td>Jimmy BOURBIER</td>
+                    <td><a href="mailto:jimmy.bourbier@lalune.net">jimmy.bourbier@lalune.net</a></td>
+                </tr>
+                <tr>
+                    <td>BILLETTERIE</td>
+                    <td>Marie YACHKOURI</td>
+                    <td><a href="mailto:marie.yachkouri@lalune.net">marie.yachkouri@lalune.net</a></td>
+                </tr>
+                <tr>
+                    <td>DÉVELOPPEMENT DURABLE</td>
+                    <td>Vincent RISBOURG</td>
+                    <td><a href="mailto:vincent.risbourg@lalune.net">vincent.risbourg@lalune.net</a></td>
+                </tr>
+                <tr>
+                    <td>BÉNÉVOLES & PARTENARIATS (RP,CE....)</td>
+                    <td>Anaïs FRAPSAUCE</td>
+                    <td><a href="mailto:anais.frapsauce@lalune.net">anais.frapsauce@lalune.net</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+    
+    <footer class="footer">
+        <img src="https://minuitavantlanuit.fr/assets/dist/front/images/footer_bandeau_sponsors.svg" alt="minuitavantlanuit footer" class="footer--img">
+        <div class="footer--first-layer">
+            <img src="https://minuitavantlanuit.fr/assets/dist/front/images/logo-footer-maln-min-2024.svg" alt="minuitavantlanuit logo" class="footer--first--logo">
+            <div class="flex-fill">
+                <div class="d-flex justify-content-around">
+                <div class="">
+                    <a href="billeteries.html" class="btn btn-outline-light rounded-0 text-uppercase rounded-btn">
+                        <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                        &nbsp; billetterie
+                    </a>
+                </div>
+                <div class="">
+                <a href="info.html#Contacts" class="btn btn-outline-light rounded-0 text-uppercase">
+                <i class="fa-regular fa-comments"></i>
+                &nbsp; contact
+                </a>
+                </div>
+                </div>
+                </div>
+        </div>  
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Minuit avant la Nuit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <img src="https://minuitavantlanuit.fr/assets/dist/front/images/MALN24_Header_MALN_mobile.png" alt="Minuit avant la nuit" class="header--img">
+</head>
+<body>
+    <nav class="sticky navbar">
+        <div class="brand  display__logo">
+            <a href="#top" class="nav__link"> <span class="logo">Minuit Avant La Nuit</span></a>
+        </div>
+    
+        <input type="checkbox" id="nav" class="hidden" />
+        <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
+        <div class="nav">
+            <ul class="nav__items">
+                <li class="nav__item"><a href="./../index.html" class="nav__link">Index</a></li>
+                <li class="nav__item"><a href="presentation.html" class="nav__link">Presentation</a></li>
+                <li class="nav__item"><a href="programmation.html" class="nav__link">Programmation</a></li>
+                <li class="nav__item"><a href="artistes.html" class="nav__link">Artistes</a></li>       
+                <li class="nav__item"><a href="billeteries.html" class="nav__link">Billeteries</a></li>   
+                <li class="nav__item"><a href="info.html" class="nav__link">Infos Pratiques</a></li>   
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="programmation">
+            <div class="programmation-btn">
+                <ul class="presentation-item">
+                    <li>
+                        <button class="btn btn-outline-light rounded-0 text-uppercase rounded-btn" onclick="scrollToSection('06')">
+                            <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                            &nbsp; JEUDI 06 JUIN
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline-light rounded-0 text-uppercase rounded-btn"onclick="scrollToSection('07')">
+                            <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                            &nbsp; VENDREDI 07 JUIN
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline-light rounded-0 text-uppercase rounded-btn" onclick="scrollToSection('08')">
+                            <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                            &nbsp; SAMEDI 08 JUIN
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline-light rounded-0 text-uppercase rounded-btn" onclick="scrollToSection('09')">
+                            <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                            &nbsp; DIMANCHE 09 JUIN
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="06" class="day-section text-center">
+                <h2>JEUDI</h2>
+            </div>
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/DOG.png" alt="Card image cap" onclick="redirectTo('artistes.html#DOG')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">DOG PARK</h5>
+                                <p class="card-text">Amiens Cable Park</p>
+                                <div id="card1-details" class="additional-details">
+                                    <p>Test</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/ADAM.png" alt="Card image cap" onclick="redirectTo('artistes.html#ADAM')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">ADAM EL MUTANT</h5>
+                                <p class="card-text">Amiens Cable Park</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/VERLATOUR.png" alt="Card image cap" onclick="redirectTo('artistes.html#VERLATOUR')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">VERLATOUR</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/kabeau.png" alt="Card image cap" onclick="redirectTo('artistes.html#KABEAU')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">KABEAUSHÉ</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="07" class="day-section text-center">
+                <h2>VENDREDI</h2>
+            </div>
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/eddypro.png" alt="Card image cap" onclick="redirectTo('artistes.html#EDDY')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">EDDY DE PRETTO</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/ZAHOPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#ZAHO')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">ZAHO DE SAGAZAN</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/OSEESPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#OSEES')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">OSEES</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/WINNTERZUKOPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#WINNTERZUKO')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">WINNTERZUKO</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="08" class="day-section text-center">
+                <h2>SAMEDI</h2>
+            </div>
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/DISIZPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#DISIZ')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">DISIZ</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/IMPEPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#IMPERATRICE')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">L'IMPÉRATRICE</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/CHARPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#CARDIN')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">CHARLOTTE CARDIN</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/TIFPROG.png" alt="Card image cap" onclick="redirectTo('artistes.html#TIF')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">TIF</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="09" class="day-section text-center">
+                <h2>DIMANCHE</h2>
+            </div>
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/NUSANPROG.png" alt="Card image cap" onclick="redirectTo('your-url-here')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">NUSANTARA BEAT</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/MASSTOPROG.png" alt="Card image cap" onclick="redirectTo('your-url-here')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">MASSTO</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/CHORALEPROG.png" alt="Card image cap" onclick="redirectTo('your-url-here')"> 
+                            <div class="card-body text-center">
+                                <h5 class="card-title">LA CHORALE ROCK DE LA LUNE DES PIRATES</h5>
+                                <p class="card-text">Parc Saint-Pierre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./img/BALADE.png" alt="Card image cap" onclick="redirectTo('your-url-here')">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">BALADE MUSICALE EN BARQUE N•3</h5>
+                                <p class="card-text">Les Hortillonnages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <img src="https://minuitavantlanuit.fr/assets/dist/front/images/footer_bandeau_sponsors.svg" alt="minuitavantlanuit footer" class="footer--img">
+        <div class="footer--first-layer">
+            <img src="https://minuitavantlanuit.fr/assets/dist/front/images/logo-footer-maln-min-2024.svg" alt="minuitavantlanuit logo" class="footer--first--logo">
+            <div class="flex-fill">
+                <div class="d-flex justify-content-around">
+                <div class="">
+                    <a href="billeteries.html" class="btn btn-outline-light rounded-0 text-uppercase rounded-btn">
+                        <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                        &nbsp; billetterie
+                    </a>
+                </div>
+                <div class="">
+                <a href="info.html#Contacts" class="btn btn-outline-light rounded-0 text-uppercase">
+                <i class="fa-regular fa-comments"></i>
+                &nbsp; contact
+                </a>
+                </div>
+                </div>
+                </div>
+        </div>  
+    </footer>
+    <script>
+            function redirectTo(url) {
+                window.location.href = url;
+            }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    <script src="./jssrc/scripts.js"></script>   
+</body>
+</html>

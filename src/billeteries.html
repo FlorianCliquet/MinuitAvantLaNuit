@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Minuit avant la Nuit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <img src="https://minuitavantlanuit.fr/assets/dist/front/images/MALN24_Header_MALN_mobile.png" alt="Minuit avant la nuit" class="header--img">
+</head>
+<body>
+    <nav class="sticky navbar">
+        <div class="brand  display__logo">
+            <a href="#top" class="nav__link"> <span class="logo">Minuit Avant La Nuit</span></a>
+        </div>
+    
+        <input type="checkbox" id="nav" class="hidden" />
+        <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
+        <div class="nav">
+            <ul class="nav__items">
+                <li class="nav__item"><a href="./../index.html" class="nav__link">Index</a></li>
+                <li class="nav__item"><a href="presentation.html" class="nav__link">Presentation</a></li>
+                <li class="nav__item"><a href="programmation.html" class="nav__link">Programmation</a></li>
+                <li class="nav__item"><a href="artistes.html" class="nav__link">Artistes</a></li>       
+                <li class="nav__item"><a href="billeteries.html" class="nav__link">Billeteries</a></li>   
+                <li class="nav__item"><a href="info.html" class="nav__link">Infos Pratiques</a></li>   
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="form-container">
+        <form action="traitement.php" method="post">
+            <h2>Acheter un billet pour le festival</h2>
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Numéro de téléphone:</label>
+                <input type="tel" id="tel" name="tel" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse postale:</label>
+                <textarea id="adresse" name="adresse" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Jours réservés:</label>
+                <div>
+                    <input type="checkbox" id="jour1" name="jours[]" value="jour1">
+                    <label for="jour1">Jeudi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="jour2" name="jours[]" value="jour2">
+                    <label for="jour2">Vendredi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="jour3" name="jours[]" value="jour1">
+                    <label for="jour1">Samedi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="jour4" name="jours[]" value="jour1">
+                    <label for="jour1">Dimanche</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Assurance:</label>
+                <div>
+                    <input type="radio" id="assuranceOui" name="assurance" value="oui" required>
+                    <label for="assuranceOui">Oui</label>
+                </div>
+                <div>
+                    <input type="radio" id="assuranceNon" name="assurance" value="non">
+                    <label for="assuranceNon">Non</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Emplacement de camping:</label>
+                <div>
+                    <input type="radio" id="campingOui" name="camping" value="oui" required>
+                    <label for="campingOui">Oui</label>
+                </div>
+                <div>
+                    <input type="radio" id="campingNon" name="camping" value="non">
+                    <label for="campingNon">Non</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>T-shirt du festival:</label>
+                <div>
+                    <input type="radio" id="tshirtOui" name="tshirt" value="oui" required>
+                    <label for="tshirtOui">Oui</label>
+                </div>
+                <div>
+                    <input type="radio" id="tshirtNon" name="tshirt" value="non">
+                    <label for="tshirtNon">Non</label>
+                </div>
+            </div>
+            <div class="form-group" id="tailleTshirt" style="display: none;">
+                <label for="taille">Taille du T-shirt:</label>
+                <select id="taille" name="taille" class="form-control">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <script>
+                document.getElementById('tshirtOui').addEventListener('change', function() {
+                    document.getElementById('tailleTshirt').style.display = 'block';
+                });
+                document.getElementById('tshirtNon').addEventListener('change', function() {
+                    document.getElementById('tailleTshirt').style.display = 'none';
+                });
+            </script>
+            <button type="submit" class="btn btn-primary">Acheter (<span id="prixTotal"></span>)</button>
+        </form>
+    </div>
+    </main>
+    
+    
+    <footer class="footer">
+        <img src="https://minuitavantlanuit.fr/assets/dist/front/images/footer_bandeau_sponsors.svg" alt="minuitavantlanuit footer" class="footer--img">
+        <div class="footer--first-layer">
+            <img src="https://minuitavantlanuit.fr/assets/dist/front/images/logo-footer-maln-min-2024.svg" alt="minuitavantlanuit logo" class="footer--first--logo">
+            <div class="flex-fill">
+                <div class="d-flex justify-content-around">
+                <div class="">
+                    <a href="billeteries.html" class="btn btn-outline-light rounded-0 text-uppercase rounded-btn">
+                        <i class="fa-solid fa-ticket fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+                        &nbsp; billetterie
+                    </a>
+                </div>
+                <div class="">
+                <a href="info.html#Contacts" class="btn btn-outline-light rounded-0 text-uppercase">
+                <i class="fa-regular fa-comments"></i>
+                &nbsp; contact
+                </a>
+                </div>
+                </div>
+                </div>
+        </div>  
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Définir les prix de base
+        const prixBaseJeudi = 33;
+        const prixBaseVendredi = 33;
+        const prixBaseSamedi = 33;
+        const prixBaseDimanche = 0; 
+        const prixPass2Jours = 53;
+        const prixAssurance = 5; 
+        const prixCamping = 10; 
+        const prixTshirt = 15; 
+
+        // Fonction pour calculer le prix total
+        function calculerPrixTotal() {
+            let prixTotal = 0;
+            const jours = document.getElementsByName('jours[]');
+            const assurance = document.querySelector('input[name="assurance"]:checked').value;
+            const camping = document.querySelector('input[name="camping"]:checked').value;
+            const tshirt = document.querySelector('input[name="tshirt"]:checked').value;
+
+            // Calculer le prix pour les jours sélectionnés
+            for (let i = 0; i < jours.length; i++) {
+                if (jours[i].checked) {
+                    switch (jours[i].value) {
+                        case 'jour1': // Jeudi
+                            prixTotal += prixBaseJeudi;
+                            break;
+                        case 'jour2': // Vendredi
+                            prixTotal += prixBaseVendredi;
+                            break;
+                        case 'jour3': // Samedi
+                            prixTotal += prixBaseSamedi;
+                            break;
+                        case 'jour4': // Dimanche
+                            prixTotal += prixBaseDimanche;
+                            break;
+                    }
+                }
+            }
+
+            // Ajouter le prix pour l'assurance si sélectionné
+            if (assurance === 'oui') {
+                prixTotal += prixAssurance;
+            }
+
+            // Ajouter le prix pour le camping si sélectionné
+            if (camping === 'oui') {
+                prixTotal += prixCamping;
+            }
+
+            // Ajouter le prix pour le T-shirt si sélectionné
+            if (tshirt === 'oui') {
+                prixTotal += prixTshirt;
+            }
+
+            // Afficher le prix total
+            document.getElementById('prixTotal').textContent = prixTotal + '€';
+        }
+
+        // Appeler la fonction calculerPrixTotal chaque fois qu'un choix change
+        document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(function(input) {
+            input.addEventListener('change', calculerPrixTotal);
+        });
+
+    </script>
+</body>
+</html>
